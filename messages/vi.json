@@ -1,0 +1,20 @@
+{
+  "HEADER": {
+    "Home": "Trang chủ",
+    "About": "Về tôi",
+    "Projects": "Dự án",
+    "Skills": "Kỹ năng",
+    "Experience": "Kinh nghiệm",
+    "Contact": "Liên hệ"
+  },
+  "INTRO": {
+    "MYSELF": "<bold>Xin chào, tôi tên Đại Phan</bold> Tôi là một <bold>lập trình viên Front-end</bold> với <bold>hơn 1.5 năm</bold> kinh nghiệm. Tôi hứng thú trong việc xây dựng các<italic> ứng dụng web</italic>. Ngôn ngữ và framework tôi chủ yếu hướng tới là <underline> React (Next.js) và Typescript</underline>",
+    "CONTACT_ME": "Liên hệ với tôi",
+    "DOWNLOAD_CV": "Tải CV xuống"
+  },
+  "ABOUT": {
+    "ABOUT_ME": "Về phía tôi",
+    "CONTACT_ME": "Contact me here",
+    "DOWNLOAD_CV": "Download CV"
+  }
+}

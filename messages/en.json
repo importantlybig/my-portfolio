@@ -1,0 +1,20 @@
+{
+  "HEADER": {
+    "Home": "Home",
+    "About": "About",
+    "Projects": "Projects",
+    "Skills": "Skills",
+    "Experience": "Experience",
+    "Contact": "Contact"
+  },
+  "INTRO": {
+    "MYSELF": "<bold>Hello, I'm Dai Phan.</bold> I'm a <bold>Front-end developer</bold> with <bold>1.5 years</bold> of experience. I enjoy building <italic>sites & app</italic>. My major focus is <underline> React (Next.js) and Typescript</underline>",
+    "CONTACT_ME": "Contact me here",
+    "DOWNLOAD_CV": "Download CV"
+  },
+  "ABOUT": {
+    "ABOUT_ME": "About me",
+    "CONTACT_ME": "Contact me here",
+    "DOWNLOAD_CV": "Download CV"
+  }
+}
