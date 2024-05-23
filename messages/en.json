@@ -14,7 +14,7 @@
   },
   "ABOUT": {
     "ABOUT_ME": "About me",
-    "CONTACT_ME": "Contact me here",
-    "DOWNLOAD_CV": "Download CV"
+    "DESCRIPTION": "After graduating from AUT university with <semibold>Computer Science</semibold> bachelor in <semibold>Software Enginnering</semibold>, I decided to pursue my passion for programming. I enrolled in a coding bootcamp and learned <semibold>Front-end web development</semibold>. <italic>My favorite part of programming</italic> is designing UI animation. My core stack is <semibold>HTML, CSS, React, Next, Animation library</semibold> . I am also familiar with TypeScript. I am always looking to learn new technologies. I am currently looking for a <semibold>full-time position  as a Software developer.</semibold>",
+    "HABITS": "<italic>When I'm not coding</italic>, I enjoy watching movies, and playing badminton. I am currently learning about <semibold>Nextjs</semibold>, and learning how to play guitar."
   }
 }

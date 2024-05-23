@@ -13,8 +13,8 @@
     "DOWNLOAD_CV": "Tải CV xuống"
   },
   "ABOUT": {
-    "ABOUT_ME": "Về phía tôi",
-    "CONTACT_ME": "Contact me here",
-    "DOWNLOAD_CV": "Download CV"
+    "ABOUT_ME": "About me",
+    "DESCRIPTION": "Sau khi tốt nghiệp từ trường đại học AUT trong lĩnh vực <semibold>Khoa học máy tính</semibold> chuyên ngành <semibold>Kỹ sư phần mềm</semibold>, Tôi quyết định theo đuổi niềm đam mê về ngôn ngữ lập trình. Tôi đã tham gia các buổi hội thảo, học thông qua các khóa học và học trở thành một <semibold>Front-end web development</semibold>. <italic>Sở thích của tôi trong việc phát triển phần mềm</italic> là thiết kế các giao diện chuyển động. Ngôn ngữ lập trình và thư viện tôi dùng chủ yếu là <semibold>HTML, CSS, React, Next, Animation library</semibold>. Tôi cũng đã làm quen với Typescript. Tôi luôn luôn muốn học hỏi công nghệ mới. Hiện tại tôi đang tìm kiếm <semibold>vị trí Frontend hoặc Fullstack toàn thời gian.</semibold>",
+    "HABITS": "<italic>Khi tôi không dành nhiều thời gian cho việc code</italic>, Tôi đôi khi chơi game và đánh cầu lông. Hiện tại tôi đang học thêm về <semibold>Fullstack</semibold> để phát triển bản thân, và học đánh đàn guitar."
   }
 }
