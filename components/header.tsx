@@ -1,23 +1,46 @@
 "use client";
 
-import React from "react";
+import React, { ChangeEvent, useTransition } from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
+
+const options = [
+  {
+    label: "EN",
+    value: "en",
+  },
+  {
+    label: "VI",
+    value: "vi",
+  },
+];
 
 export default function Header() {
   const t = useTranslations("HEADER");
+  const localActive = useLocale();
+  const router = useRouter();
+
+  const [isPending, startTransition] = useTransition();
 
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
 
+  const handleChangeLanguage = (e: ChangeEvent<HTMLSelectElement>) => {
+    const nextLocale = e.target.value;
+    startTransition(() => {
+      router.replace(`/${nextLocale}`);
+    });
+  };
+
   return (
     <header className="z-[999] relative">
       <motion.div
-        className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[40rem] sm:rounded-full sm:px-6 dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
+        className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[43rem] sm:rounded-full sm:px-6 dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       />
@@ -60,6 +83,21 @@ export default function Header() {
               </Link>
             </motion.li>
           ))}
+          <motion.li
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+          >
+            <select
+              defaultValue={localActive}
+              className="border-0 text-gray-500 bg-transparent text-sm rounded-lg block w-[4rem] p-2.5 hover:text-gray-950  bg-gray-50 focus:border-none"
+              onChange={handleChangeLanguage}
+              disabled={isPending}
+            >
+              {options.map(({ label, value }) => {
+                return <option value={value}>{label}</option>;
+              })}
+            </select>
+          </motion.li>
         </ul>
       </nav>
     </header>

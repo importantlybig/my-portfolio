@@ -16,6 +16,8 @@ export default function Project({
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
+    // BOTTOM of the viewport TOUCH the TOP of element
+    // the BOTTOM of the view port has GONE 33%
     offset: ["0 1", "1.33 1"],
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
