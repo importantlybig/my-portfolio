@@ -1,50 +1,58 @@
-"use client";
+'use client';
 
-import { SectionName } from "@/lib/types";
-import React, { useState, createContext, useContext } from "react";
+import { SectionName } from '@/lib/types';
+import React, { useState, createContext, useContext } from 'react';
 
 type ActiveSectionContextProviderProps = {
-  children: React.ReactNode;
+	children: React.ReactNode;
 };
 
 type ActiveSectionContextType = {
-  activeSection: SectionName;
-  setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
-  timeOfLastClick: number;
-  setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
+	activeSection: SectionName;
+	handleSetActiveSection: (section: SectionName) => void;
+	timeOfLastClick: number;
+	handleSetTimeOfLastClick: (time: number) => void;
 };
 
 export const ActiveSectionContext =
-  createContext<ActiveSectionContextType | null>(null);
+	createContext<ActiveSectionContextType | null>(null);
 
 export default function ActiveSectionContextProvider({
-  children,
+	children,
 }: ActiveSectionContextProviderProps) {
-  const [activeSection, setActiveSection] = useState<SectionName>("Home");
-  const [timeOfLastClick, setTimeOfLastClick] = useState(0); // we need to keep track of this to disable the observer temporarily when user clicks on a link
+	const [activeSection, setActiveSection] = useState<SectionName>('Home');
+	const [timeOfLastClick, setTimeOfLastClick] = useState(0); // we need to keep track of this to disable the observer temporarily when user clicks on a link
 
-  return (
-    <ActiveSectionContext.Provider
-      value={{
-        activeSection,
-        setActiveSection,
-        timeOfLastClick,
-        setTimeOfLastClick,
-      }}
-    >
-      {children}
-    </ActiveSectionContext.Provider>
-  );
+	const handleSetActiveSection = (section: SectionName) => {
+		return setActiveSection(section);
+	};
+
+	const handleSetTimeOfLastClick = (time: number) => {
+		return setTimeOfLastClick(time);
+	};
+
+	return (
+		<ActiveSectionContext.Provider
+			value={{
+				activeSection,
+				handleSetActiveSection,
+				timeOfLastClick,
+				handleSetTimeOfLastClick,
+			}}
+		>
+			{children}
+		</ActiveSectionContext.Provider>
+	);
 }
 
 export function useActiveSectionContext() {
-  const context = useContext(ActiveSectionContext);
+	const context = useContext(ActiveSectionContext);
 
-  if (context === null) {
-    throw new Error(
-      "useActiveSectionContext must be used within an ActiveSectionContextProvider"
-    );
-  }
+	if (context === null) {
+		throw new Error(
+			'useActiveSectionContext must be used within an ActiveSectionContextProvider'
+		);
+	}
 
-  return context;
+	return context;
 }
