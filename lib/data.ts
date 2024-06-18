@@ -38,7 +38,7 @@ export const experiencesData = [
     title: "AUT University",
     location: "New Zealand",
     description:
-      "Graduated from AUT university with Computer Science bachelor in Software Enginnering",
+      "Graduated from AUT university with Computer Science bachelor in Software Enginnering and 3.51 GPA achievements",
     icon: React.createElement(LuGraduationCap),
     date: "2018 - 2022",
   },
@@ -46,7 +46,7 @@ export const experiencesData = [
     title: "Fullstack Developer",
     location: "TAP TAP",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "I worked as a Fullstack developer for 8 months. React, Typescript, Nestjs, and MongoDB are core stacks which I have worked on company. My responsible is based on Figma design using React and Ant Desgin to build up and using Nest to build API.",
     icon: React.createElement(CgWorkAlt),
     date: "2022 - 2023",
   },
@@ -54,7 +54,7 @@ export const experiencesData = [
     title: "Frontend Developer",
     location: "Fullerton Health VN",
     description:
-      "I'm now a front-end developer. My stack includes React, Next.js, TypeScript, Ant Design .... I'm open to full-time opportunities.",
+      "I'm now a Front-end developer. My stack includes React, Next.js, TypeScript, Ant Design ...",
     icon: React.createElement(FaReact),
     date: "2023 - Present",
   },
